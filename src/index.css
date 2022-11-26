@@ -3,7 +3,50 @@
   padding: 0;
 }
 
+@media (max-width: 299px) {
+
+  .slider {
+    grid-template-columns: 1fr 150px 1fr;
+  }
+
+  .padding, .frame {
+    width: 150px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+
+  .slider {
+    grid-template-columns: 1fr 190px 1fr;
+  }
+
+  .padding, .frame {
+    width: 190px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 460px) {
+
+  .slider {
+    grid-template-columns: 1fr 280px 1fr;
+  }
+
+  .padding, .frame {
+    width: 280px;
+  }
+}
+
 @media (max-width: 460px) {
+
+  .third-grid p {
+    text-align: center;
+  }
+
+  .contact>div>div, .contact>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 
   .content {
     background-color: rgb(0, 120, 120);
@@ -11,23 +54,14 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    padding: 30px;
   }
-
-  .projects {
+  
+  .content>div>div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-  }
-
-  .img-holder {
-    width: 70vw;
-  }
-
-  .content {
-    width: 100%;
-    height: 100%;
-    padding: 30px 0px;
+    gap: 30px;
   }
 }
 
@@ -60,12 +94,6 @@
     text-align: center;
   }
 
-  .third-grid>div {
-    display: grid;
-    grid-template-rows: 50px 1fr 50px;
-    grid-template-columns: 15% 1fr 15%;
-  }
-
   .third-grid p {
     width: 80%;
     text-align: center;
@@ -87,46 +115,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
   }
 
   .contact>div {
     display: flex;
     justify-content: center;
-    gap: 50px;
   }
 
   .contact>div>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
-  }
-
-
-  .padding {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .padding>div {
-    width: 85%;
-  }
-
-  .slider {
-    display: grid;
-    width: 80%;
-  }
-
-  .frame>div {
-    display: grid;
-    grid-auto-columns: auto;
-    grid-auto-flow: column;
-  }
-
-  .frame p {
-    text-align: center;
   }
 
   .content>div>div {
@@ -161,8 +160,28 @@
 }
 
 @media (min-width: 461px) and (max-width: 1024px) {
+
+  .contact>div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .contact>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .content>div {
     padding: 30px;
+  }
+
+  .content>div>div {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .slider {
@@ -173,10 +192,6 @@
     width: 450px;
   }
 
-  .content>div>div {
-    padding: 30px;
-  }
-
   .content {
     display: flex;
     flex-direction: column;
@@ -184,7 +199,33 @@
   }
 }
 
+@media (min-width: 461px) and (max-width: 585px) {
+  .slider {
+    grid-template-columns: 1fr 300px 1fr;
+  }
+
+  .padding, .frame {
+    width: 300px;
+  }
+}
+
+@media (min-width: 586px) and (max-width: 700px) {
+  .slider {
+    grid-template-columns: 1fr 350px 1fr;
+  }
+
+  .padding, .frame {
+    width: 350px;
+  }
+}
+
 @media (min-width: 1025px) {
+
+  .third-grid>div {
+    display: grid;
+    grid-template-rows: 20% 1fr 20%;
+    grid-template-columns: 10% 1fr 10%;
+  }
 
   .content {
     display: grid;
@@ -223,6 +264,18 @@
 
 @media (min-width: 1025px) and (max-width: 1599px) {
 
+  .contact>div {
+    gap: 50px;
+  }
+
+  .contact {
+    gap: 10px;
+  }
+
+  .contact>div>div {
+    gap: 5px;
+  }
+
   .slider.first {
     grid-template-columns: 1fr 400px 1fr;
   }
@@ -240,6 +293,19 @@
 }
 
 @media (min-width: 1600px) {
+
+  .contact>div {
+    gap: 100px;
+  }
+
+  .contact {
+    gap: 20px;
+  }
+
+  .contact>div>div {
+    gap: 10px;
+  }
+
   .slider {
     grid-template-columns: 1fr 450px 1fr;
   }
@@ -247,6 +313,31 @@
   .padding, .frame {
     width: 450px;
   }
+}
+
+
+.padding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding>div {
+  width: 85%;
+}
+
+.slider {
+  display: grid;
+}
+
+.frame>div {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+}
+
+.frame p {
+  text-align: center;
 }
 
 .frame {

@@ -9,6 +9,28 @@ import exclamation from './images/exclamation.svg'
 function App() {
   const [framePosition, setFramePosition] = useState(0);
   const [projectFramePosition, setProjectFramePosition] = useState(0);
+  const mobile = window.matchMedia('(max-width: 1024px)');
+
+  useEffect(() => {
+    console.log(mobile)
+    if (mobile.matches) {
+      const note = document.querySelector('.exclamation>div');
+      note.addEventListener('click', handleClick);
+    } else {
+      const note = document.querySelector('.exclamation>div');
+      note.removeEventListener('click', handleClick);
+    }
+  }, [mobile]);
+
+  const handleClick = () => {
+    const text = document.querySelector('.exclamation>p');
+
+    if (text.style.display == '') {
+      text.style.display = 'block';
+    } else {
+      text.style.display = '';
+    }
+  };
 
   const handleSlide = (dir) => {
     const left = document.querySelector('.left');
@@ -148,7 +170,7 @@ function App() {
           <div>
               <h2>Experience:</h2>
             <div>
-              <p>I have experience with the technologies which I used for my projects. So the list goes: HTML, CSS, Vanilla Javascript and ReactJS. I learned them in this order as well. That's why I only used React for the Cat Room app which is by far my best one yet. (I'm also using React for this portfolio right now.) I also had some insight into Redux while making the Cat Room app and I also have a bit of experience with Webpack, some plugins and the Terminal as well. I tried to use some image editors for logos too. I use Windows since I can't install Ubuntu on my laptop I own at the moment but first I started my journey with Ubuntu.</p>
+              <p>I have experience with the technologies I used for my projects. So the list goes: HTML, CSS, Vanilla Javascript and ReactJS. I learned them in this order as well. That's why I only used React for the Cat Room app which is by far my best one yet. (I'm also using React for this portfolio right now.) I also had some insight into Redux while making the Cat Room app and I also have a bit of experience with Webpack, some plugins and the Terminal as well. I tried to use some image editors for logos too. I use Windows since I can't install Ubuntu on my laptop I own at the moment but first I started my journey with Ubuntu.</p>
               <p>I'm a self taught developer. I don't have any proof of my knoweledge but I have put many hours into IT related things let alone web development. I'm taking this very seriously and intend to make good work in this field.</p>
               <p>Maybe the only qualification that's relevant and I should mention is my advanced english exam I took at the end of my High School years. I wouldn't say I'm native but I'm trying my best and I have some good basics.</p>
             </div>
