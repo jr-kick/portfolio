@@ -4,65 +4,390 @@
 }
 
 @media (max-width: 460px) {
+
+  .content {
+    background-color: rgb(0, 120, 120);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .img-holder {
+    width: 70vw;
+  }
+
   .content {
     width: 100%;
     height: 100%;
-  }
-
-  h1 {
-    padding: 20px 0px;
+    padding: 30px 0px;
   }
 }
 
-.content p {
-  font-size: 1.3rem;
-  text-align: center;
-  width: 60%;
+@media (min-width: 461px) {
+
+  .fourth-grid>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-grid>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .second-grid>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .second-grid>div>p {
+    width: 80%;
+    text-align: center;
+  }
+
+  .third-grid>div {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 15% 1fr 15%;
+  }
+
+  .third-grid p {
+    width: 80%;
+    text-align: center;
+  }
+
+  .third-grid h2 {
+    align-self: center;
+    justify-self: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  .third-grid>div>div {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .contact>div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .contact>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  .padding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .padding>div {
+    width: 85%;
+  }
+
+  .slider {
+    display: grid;
+    width: 80%;
+  }
+
+  .frame>div {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+  }
+
+  .frame p {
+    text-align: center;
+  }
+
+  .content>div>div {
+    transition: box-shadow 0.2s;
+  }
+
+  .content>div>div:hover {
+    box-shadow: 0px 0px 10px 7px rgb(0, 192, 192);
+  }
+
+  .project img {
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 10px;
+  }
+
+  .project a:hover>img {
+    border-color: rgb(0, 192, 192);
+  }
+
+  .fourth-grid p {
+    width: 100%;
+  }
+
+  .content>div>div {
+    background-color: rgb(0, 120, 120);
+    border-radius: 50px;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
 
-.info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
+@media (min-width: 461px) and (max-width: 1024px) {
+  .content>div {
+    padding: 30px;
+  }
+
+  .slider {
+    grid-template-columns: 1fr 450px 1fr;
+  }
+
+  .padding, .frame {
+    width: 450px;
+  }
+
+  .content>div>div {
+    padding: 30px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 
-.slide {
-  width: 10vw;
+@media (min-width: 1025px) {
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh 15vh 35vh;
+  }
+
+  .content>div>div {
+    height: 100%;
+  }
+
+  .content>div {
+    padding: 30px;
+  };
+
+  .first-grid {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .second-grid {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .third-grid {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .fourth-grid {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+
+  .slider.first {
+    grid-template-columns: 1fr 400px 1fr;
+  }
+
+  .frame.first, .padding.first {
+    width: 400px;
+  }
+  .slider.second {
+    grid-template-columns: 1fr 350px 1fr;
+  }
+
+  .frame.second, .padding.second{
+    width: 350px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .slider {
+    grid-template-columns: 1fr 450px 1fr;
+  }
+
+  .padding, .frame {
+    width: 450px;
+  }
 }
 
 .frame {
   overflow: hidden;
-  width: 80vw;
-  display: flex;
-  justify-content: center;
 }
 
 .frame>div {
-  display: flex;
-  justify-content: center;
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
-.frame>div>div {
-  width: 100vw;
+h1:hover, h2:hover {
+  cursor: default;
+}
+
+.content>div:not(.fourth-grid) p:hover {
+  cursor: default;
+}
+
+.content>div:not(.fourth-grid) *::selection {
+  background: none;
+}
+
+.left {
+  grid-column: 1/2;
+  align-self: center;
+}
+
+.frame {
+  grid-column: 2/3;
+  align-self: center;
+}
+
+.right {
+  grid-column: 3/4;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.exclamation {
+  width: 30px;
+}
+
+.title {
   display: flex;
-  justify-content: center;
   align-items: center;
-  opacity: 0;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.exclamation:hover>p {
+  display: block;
+}
+
+.exclamation>p {
+  position: absolute;
+  width: 300px;
+  z-index: 1;
+  color: rgb(0, 192, 192);
+  background-color: rgb(20, 20, 20);
+  padding: 15px;
+  border-radius: 20px;
+  display: none;
+}
+
+.third-grid>div>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.project * {
+  color: rgb(0, 120, 120);
+}
+
+.project>div {
+  background-color: rgb(20, 20, 20);
+  gap: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.project a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.projects a:hover * {
+  color: rgb(0, 192, 192);
+}
+
+a:visited {
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.slide {
+  width: 30px;
+}
+
+.slide button {
+  display: flex;
+  width: 100%;
+  background: none;
+  border: none;
+}
+
+.left img {
+  transform: rotate(180deg);
 }
 
 .App {
   background-color: rgb(28, 28, 28);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content {
-  background-color: rgba(0, 255, 255, 0.386);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.fourth-grid a {
+  text-decoration: underline;
 }
